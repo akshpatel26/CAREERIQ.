@@ -414,13 +414,9 @@ def setup_phase():
 
     # Only show mode selection if no mode is selected
     if not st.session_state.quiz_state.get('quiz_mode'):
-        st.markdown("""
-        ### 🎓 Welcome to Our Comprehensive Learning Platform!
-        
-        **Learn, practice, and prepare with intelligent quizzes and AI-powered interviews.**
-        """)
+        st.markdown("""### 🎓 Welcome to Our Comprehensive Learning Platform! """)
 
-        st.markdown("### 🔍 Select Learning Mode:")
+        st.markdown("### Select Learning Mode:")
 
         # First row - 2 columns
         col1, col2 = st.columns(2)
@@ -451,7 +447,7 @@ def setup_phase():
         # ML Based Quiz (centered)
         with col_center:
             if st.button(
-                "**📘 ML-Based Quiz**  \n*Questions from semester PDFs*",
+                "**📘 Smart Academic Evaluator**  \n*Questions from semester Subjects*",
                 key="ml_mode",
                 use_container_width=True
             ):
@@ -602,7 +598,7 @@ def show_static_quiz_settings():
     
     with col1:
         difficulty = st.selectbox(
-            "🎲 Difficulty Level",
+            " Difficulty Level",
             options=['easy', 'medium', 'hard'],
             index=1,
             key="static_difficulty"
@@ -611,7 +607,7 @@ def show_static_quiz_settings():
     
     with col2:
         num_questions = st.selectbox(
-            "🎯 Number of Questions",
+            " Number of Questions",
             options=[20,25,30,40],
             index=1,
             key="static_questions"
@@ -620,14 +616,14 @@ def show_static_quiz_settings():
     
     with col3:
         timer_duration = st.selectbox(
-            "⏱️ Timer (seconds)",
+            "⏱ Timer (seconds)",
             options=[30,45,60,90],
             index=0,
             key="static_timer"
         )
         st.session_state.quiz_state['timer_duration'] = timer_duration
     
-    st.info(f"🎯 **{difficulty.capitalize()}** difficulty | 📊 **{num_questions}** questions | ⏱️ **{timer_duration}s** per question")
+    st.info(f" **{difficulty.capitalize()}** difficulty |  **{num_questions}** questions |  **{timer_duration}s** per question")
     
     # Action buttons
     col1, col2, col3 = st.columns([1, 2, 1])
@@ -638,7 +634,7 @@ def show_static_quiz_settings():
             st.rerun()
     
     with col2:
-        if st.button("🚀 Start Question Bank Quiz", use_container_width=True, type="primary"):
+        if st.button(" Start Question Bank Quiz", use_container_width=True, type="primary"):
             questions = generate_static_questions()
             if questions:
                 st.session_state.quiz_state['questions'] = questions
@@ -651,15 +647,15 @@ def show_static_quiz_settings():
 
 def programming_language_selection():
     """Programming language selection interface"""
-    st.markdown("## 💻 Select Programming Language")
-    st.markdown("Choose which programming language you'd like to be quizzed on:")
+    st.markdown("## Select Programming Language")
+    # st.markdown("Choose which programming language you'd like to be quizzed on:")
     
     languages = [
-        ('C', '🔹', 'C Programming'),
-        ('C++', '🔸', 'C++ Programming'),
-        ('Java', '☕', 'Java Programming'),
-        ('Python', '🐍', 'Python Programming'),
-        ('JavaScript', '🟨', 'JavaScript Programming')
+        ('C', '', 'C Programming'),
+        ('C++', '', 'C++ Programming'),
+        ('Java', '', 'Java Programming'),
+        ('Python', '', 'Python Programming'),
+        ('JavaScript', '', 'JavaScript Programming')
     ]
     
     row1_cols = st.columns(3)
@@ -690,19 +686,19 @@ def programming_language_selection():
 
 def programming_settings_phase():
     """Settings phase for programming quizzes"""
-    st.markdown(f"# 💻 {st.session_state.quiz_state['programming_language']} Programming Quiz")
-    st.markdown("Configure your quiz settings:")
+    st.markdown(f"### {st.session_state.quiz_state['programming_language']} Programming Quiz")
+    # st.markdown("Configure your quiz settings:")
     
     lang = st.session_state.quiz_state['programming_language']
-    language_icons = {'C': '🔹', 'C++': '🔸', 'Java': '☕', 'Python': '🐍', 'JavaScript': '🟨'}
+    language_icons = {'C': '', 'C++': '', 'Java': '', 'Python': '', 'JavaScript': ''}
     
     st.success(f"✅ Selected: {language_icons.get(lang, '💻')} {lang} Programming")
-    st.markdown("<br>", unsafe_allow_html=True)
+    # st.markdown("<br>", unsafe_allow_html=True)
     
     settings_cols = st.columns(3)
     
     with settings_cols[0]:
-        st.markdown("⏱ Timer Settings")
+        st.markdown("Timer Settings")
         timer_duration = st.selectbox(
             "Timer per question",
             options=[30,45,60],
@@ -713,7 +709,7 @@ def programming_settings_phase():
         st.session_state.quiz_state['timer_duration'] = timer_duration
 
     with settings_cols[1]:
-        st.markdown("🎲 Difficulty Level")
+        st.markdown(" Difficulty Level")
         difficulty = st.selectbox(
             "Choose difficulty",
             options=['easy', 'medium', 'hard'],
@@ -723,7 +719,7 @@ def programming_settings_phase():
         st.session_state.quiz_state['difficulty'] = difficulty
 
     with settings_cols[2]:
-        st.markdown("🎯 Quiz Length")
+        st.markdown(" Quiz Length")
         num_questions = st.selectbox(
             "Number of questions",
             options=[ 15, 20,25,30],
@@ -745,7 +741,7 @@ def programming_settings_phase():
     
     with col2:
         # Generate questions based on quiz mode
-        if st.button("🚀 Start Programming Quiz", use_container_width=True, type="primary"):
+        if st.button(" Start Programming Quiz", use_container_width=True, type="primary"):
             if st.session_state.quiz_state['quiz_mode'] == 'static':
                 questions = generate_static_questions()
             else:  # AI mode
@@ -839,7 +835,7 @@ def show_ai_quiz_settings():
     
     with col1:
         num_questions = st.selectbox(
-            "🎯 Number of Questions",
+            " Number of Questions",
             options=[15, 20, 25, 30],
             index=1,
             key="ai_questions"
@@ -848,16 +844,15 @@ def show_ai_quiz_settings():
     
     with col2:
         timer_duration = st.selectbox(
-            "⏱️ Timer (seconds)",
+            " Timer (seconds)",
             options=[30, 45, 60, 90],
             index=0,
             key="ai_timer"
         )
         st.session_state.quiz_state['timer_duration'] = timer_duration
     
-    st.info(f"📊 **{num_questions}** questions | ⏱️ **{timer_duration}s** per question")
+    st.info(f" **{num_questions}** questions |  **{timer_duration}s** per question")
     
-    st.markdown("---")
     col1, col2, col3 = st.columns([1, 2, 1])
     
     with col1:
@@ -867,7 +862,7 @@ def show_ai_quiz_settings():
             st.rerun()
     
     with col2:
-        if st.button("🚀 Generate AI Quiz", use_container_width=True, type="primary"):
+        if st.button(" Generate AI Quiz", use_container_width=True, type="primary"):
             st.session_state.quiz_state['phase'] = 'generating'
             st.rerun()
 
@@ -879,7 +874,7 @@ def generating_phase():
     difficulty = st.session_state.quiz_state['difficulty']
     num_questions = st.session_state.quiz_state['num_questions']
     
-    st.info(f"📋 **Topic:** {topic} | 🎯 **Difficulty:** {difficulty.capitalize()} | 📊 **Questions:** {num_questions}")
+    st.info(f" **Topic:** {topic} |  **Difficulty:** {difficulty.capitalize()} |  **Questions:** {num_questions}")
     
     status_container = st.container()
     spinner_container = st.container()
@@ -1050,7 +1045,7 @@ def results_phase():
     """Display quiz results with timer statistics"""
     quiz_state = st.session_state.quiz_state
     
-    st.markdown("# 🎯 Quiz Results")
+    st.markdown("#  Quiz Results")
     
     # Summary stats
     col1, col2, col3, col4 = st.columns(4)
