@@ -350,64 +350,6 @@ def handle_answer_selection_with_timer(option_index):
         st.session_state.quiz_state['phase'] = 'results'
     
     st.rerun()
-
-# def setup_phase():
-#     """Main setup interface"""
-
-#     # Only show mode selection if no mode is selected
-#     if not st.session_state.quiz_state.get('quiz_mode'):
-#         st.markdown("""
-#         ### 🎓 Welcome to Our Comprehensive Learning Platform!
-        
-#         **Learn, practice, and prepare with intelligent quizzes and AI-powered interviews.**
-#         """)
-
-#         st.markdown("### 🔍 Select Learning Mode:")
-
-#         # 1 row with 3 columns layout
-#         col1, col2, col3 = st.columns(3)
-
-#         # Question Bank Quiz
-#         with col1:
-#             if st.button(
-#                 "**📚 Question Bank Quiz**  \n*Pre-loaded curated questions*",
-#                 key="static_mode",
-#                 use_container_width=True
-#             ):
-#                 st.session_state.quiz_state['quiz_mode'] = 'static'
-#                 st.rerun()
-
-#         # AI Generated Quiz
-#         with col2:
-#             if st.button(
-#                 "**⚙️ AI-Generated Quiz**  \n*Unlimited AI-created questions*",
-#                 key="ai_mode",
-#                 use_container_width=True,
-#                 type="primary"
-#             ):
-#                 st.session_state.quiz_state['quiz_mode'] = 'ai'
-#                 st.rerun()
-
-#         # ML Based Quiz
-#         with col3:
-#             if st.button(
-#                 "**📘 ML-Based Quiz**  \n*Questions from semester PDFs*",
-#                 key="ml_mode",
-#                 use_container_width=True
-#             ):
-#                 st.session_state.quiz_state['quiz_mode'] = 'ml'
-#                 st.rerun()
-
-#     # Render setup pages based on selected mode
-#     else:
-#         mode = st.session_state.quiz_state['quiz_mode']
-
-#         if mode == 'ai':
-#             ai_quiz_setup()
-#         elif mode == 'static':
-#             static_quiz_setup()
-#         elif mode == 'ml':
-#             ml_quiz_setup()
             
 def setup_phase():
     """Main setup interface"""
