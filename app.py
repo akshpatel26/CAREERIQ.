@@ -882,115 +882,6 @@ class ResumeApp:
                 st.session_state.page = 'home'
                 st.rerun()
     
-    # def show_about_page(self):
-    #     """Display the About Us page"""
-    #     apply_modern_styles()
-        
-    #     st.markdown("""
-    #     <div style="max-width: 900px; margin: 0 auto; padding: 40px 20px;">
-    #         <h1 style="color: #00bfa5; text-align: center; margin-bottom: 40px;">About CareerIQ</h1>
-            
-    #         <div style="background: rgba(255,255,255,0.05); padding: 30px; border-radius: 15px; border: 1px solid rgba(255,255,255,0.1);">
-    #             <h3 style="color: #00bfa5; margin-bottom: 15px;">🚀 Our Mission</h3>
-    #             <p style="color: #ccc; line-height: 1.8; margin-bottom: 30px;">
-    #                 CareerIQ is dedicated to empowering job seekers with AI-powered tools to navigate their career journey. 
-    #                 We combine cutting-edge technology with user-friendly design to make job searching, resume building, and 
-    #                 career planning accessible to everyone.
-    #             </p>
-                
-    #             <h3 style="color: #00bfa5; margin-bottom: 15px;">💡 What We Offer</h3>
-    #             <ul style="color: #ccc; line-height: 2; margin-bottom: 30px;">
-    #                 <li><strong>AI-Powered Job Search:</strong> Find relevant opportunities tailored to your skills</li>
-    #                 <li><strong>Resume Builder:</strong> Create professional resumes with intelligent suggestions</li>
-    #                 <li><strong>Career Tools:</strong> Access resources to boost your professional growth</li>
-    #                 <li><strong>Interview Prep:</strong> Get ready with AI-driven practice and tips</li>
-    #             </ul>
-                
-    #             <h3 style="color: #00bfa5; margin-bottom: 15px;">🎯 Our Vision</h3>
-    #             <p style="color: #ccc; line-height: 1.8;">
-    #                 To become the most trusted platform for career development, helping millions achieve their professional goals 
-    #                 through innovative AI solutions.
-    #             </p>
-                
-    #             <p style="color: #999; margin-top: 40px; text-align: center; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1);">
-    #                 Built with ❤️ by the CareerIQ Team
-    #             </p>
-    #         </div>
-    #     </div>
-    #     """, unsafe_allow_html=True)
-        
-    #     st.markdown("<br><br>", unsafe_allow_html=True)
-    #     col1, col2, col3 = st.columns([1, 2, 1])
-    #     with col2:
-    #         if st.button("← Back to Home", key="back_home_about", use_container_width=True):
-    #             st.query_params.clear()
-    #             st.session_state.page = 'home'
-    #             st.rerun()
-    
-    # def show_help_page(self):
-    #     """Display the Help/FAQ page"""
-    #     apply_modern_styles()
-        
-    #     st.markdown("""
-    #     <div style="max-width: 900px; margin: 0 auto; padding: 40px 20px;">
-    #         <h1 style="color: #00bfa5; text-align: center; margin-bottom: 40px;">Help & FAQs</h1>
-            
-    #         <div style="background: rgba(255,255,255,0.05); padding: 30px; border-radius: 15px; border: 1px solid rgba(255,255,255,0.1);">
-    #             <h3 style="color: #00bfa5; margin-bottom: 30px;">❓ Frequently Asked Questions</h3>
-                
-    #             <div style="margin-bottom: 25px;">
-    #                 <h4 style="color: #fff; margin-bottom: 10px;">Q: How does CareerIQ work?</h4>
-    #                 <p style="color: #ccc; line-height: 1.8;">
-    #                     CareerIQ uses AI and APIs to aggregate job listings from various platforms, helping you find opportunities 
-    #                     that match your skills and preferences.
-    #                 </p>
-    #             </div>
-                
-    #             <div style="margin-bottom: 25px;">
-    #                 <h4 style="color: #fff; margin-bottom: 10px;">Q: Is CareerIQ free to use?</h4>
-    #                 <p style="color: #ccc; line-height: 1.8;">
-    #                     Yes! Our core features are completely free for all users.
-    #                 </p>
-    #             </div>
-                
-    #             <div style="margin-bottom: 25px;">
-    #                 <h4 style="color: #fff; margin-bottom: 10px;">Q: Do you store my personal data?</h4>
-    #                 <p style="color: #ccc; line-height: 1.8;">
-    #                     We respect your privacy. We don't store job content or misuse your data. Please review our Privacy Policy for details.
-    #                 </p>
-    #             </div>
-                
-    #             <div style="margin-bottom: 25px;">
-    #                 <h4 style="color: #fff; margin-bottom: 10px;">Q: How do I create a resume?</h4>
-    #                 <p style="color: #ccc; line-height: 1.8;">
-    #                     Navigate to the Resume Builder section and follow the step-by-step guide to create a professional resume.
-    #                 </p>
-    #             </div>
-                
-    #             <div style="margin-bottom: 25px;">
-    #                 <h4 style="color: #fff; margin-bottom: 10px;">Q: Can I export my resume?</h4>
-    #                 <p style="color: #ccc; line-height: 1.8;">
-    #                     Yes! You can download your resume in PDF format once it's ready.
-    #                 </p>
-    #             </div>
-                
-    #             <h3 style="color: #00bfa5; margin-top: 40px; margin-bottom: 15px;">📧 Still Need Help?</h3>
-    #             <p style="color: #ccc; line-height: 1.8;">
-    #                 Contact us at <a href="mailto:contact.careeriq@gmail.com" style="color: #00bfa5; text-decoration: none;">
-    #                 contact.careeriq@gmail.com</a> and we'll get back to you within 24-48 hours.
-    #             </p>
-    #         </div>
-    #     </div>
-    #     """, unsafe_allow_html=True)
-        
-    #     st.markdown("<br><br>", unsafe_allow_html=True)
-    #     col1, col2, col3 = st.columns([1, 2, 1])
-    #     with col2:
-    #         if st.button("← Back to Home", key="back_home_help", use_container_width=True):
-    #             st.query_params.clear()
-    #             st.session_state.page = 'home'
-    #             st.rerun()
-        
     
     def render_dashboard(self):
         """Render the dashboard page"""
@@ -1064,7 +955,6 @@ class ResumeApp:
     </style>
 """, unsafe_allow_html=True)
 
-        
 
         # Template selection
         template_options = ["Modern", "Professional", "Minimal", "Creative"]
@@ -1712,11 +1602,7 @@ class ResumeApp:
                     
                 ]
             }
-        
-        
-        # Template Selection Section (Main Area)
-        # st.markdown("##  Choose Template")
-        
+
         col1, col2 = st.columns([1, 2])
         
         with col1:
@@ -4181,140 +4067,9 @@ class ResumeApp:
         with stats_tab:
             feedback_manager.render_feedback_stats()
             
-            
-        
-    # def render_header(self):
-    #     """Render navigation header with scrolling announcements"""
-    #     st.markdown("""
-    #     <style>
-    #     header[data-testid="stHeader"] { display: none; }
-    #     footer { display: none; }
-        
-    #     .block-container {
-    #         padding-top: 0rem !important;
-    #     }
-        
-    #     .custom-header {
-    #         position: fixed;
-    #         top: 0;
-    #         left: 0;
-    #         width: 100%;
-    #         height: 80px;
-    #         background: linear-gradient(90deg, #050510, #0b0f2a);
-    #         display: flex;
-    #         align-items: center;
-    #         justify-content: space-between;
-    #         padding: 0 60px;
-    #         z-index: 100000;
-    #         box-shadow: 0 2px 20px rgba(0,0,0,0.5);
-    #     }
-        
-    #     .header-spacer {
-    #         height: 90px;
-    #     }
-        
-    #     .logo {
-    #         color: white;
-    #         font-size: 30px;
-    #         font-weight: bold;
-    #         cursor: pointer;
-    #     }
-        
-    #     .nav-links {
-    #         display: flex;
-    #         gap: 30px;
-    #     }
-        
-    #     .nav-links a {
-    #         color: white;
-    #         text-decoration: none;
-    #         font-size: 16px;
-    #         transition: color 0.3s;
-    #         cursor: pointer;
-    #     }
-        
-    #     .nav-links a:hover {
-    #         color: #4dabf7;
-    #     }
-        
-    #     .nav-links a.active {
-    #         color: #00bfa5;
-    #         font-weight: 600;
-    #     }
-        
-    #     /* Scrolling Announcement Bar */
-    #     .announcement-bar {
-    #         flex: 1;
-    #         height: 50px;
-    #         background: linear-gradient(90deg, #1a1a2e, #16213e);
-    #         overflow: hidden;
-    #         border-radius: 10px;
-    #         margin-left: 30px;
-    #     }
-        
-    #     .announcement-content {
-    #         display: flex;
-    #         align-items: center;
-    #         height: 100%;
-    #         animation: scroll-left 40s linear infinite;
-    #         white-space: nowrap;
-    #     }
-        
-    #     .announcement-item {
-    #         display: inline-flex;
-    #         align-items: center;
-    #         padding: 0 50px;
-    #         color: white;
-    #         font-size: 16px;
-    #         font-weight: 500;
-    #     }
-        
-    #     .announcement-item::after {
-    #         content: "•";
-    #         margin-left: 50px;
-    #         color: #00bfa5;
-    #         font-size: 20px;
-    #     }
-        
-    #     @keyframes scroll-left {
-    #         0% {
-    #             transform: translateX(0);
-    #         }
-    #         100% {
-    #             transform: translateX(-50%);
-    #         }
-    #     }
-        
-    #     .announcement-bar:hover .announcement-content {
-    #         animation-play-state: paused;
-    #     }
-    #     </style>
-        
-    #     <div class="custom-header">
-    #         <div class="logo" onclick="window.location.href='?page=home'">
-    #             📈 <span>CareerIQ</span>
-    #         </div>
-    #         <div class="announcement-bar">
-    #             <div class="announcement-content">
-    #                 <span class="announcement-item">
-    #                     🚀 Welcome to CareerIQ — an AI-powered career platform for resume building, ATS optimization, job search, portfolio creation, mock interviews, smart quizzes, and career insights.
-    #                 </span>
-    #                 <span class="announcement-item">
-    #                     🚀 Welcome to CareerIQ — an AI-powered career platform for resume building, ATS optimization, job search, portfolio creation, mock interviews, smart quizzes, and career insights.
-    #                 </span>
-    #             </div>
-    #         </div>
-    #     </div>
-        
-    #     <div class="header-spacer"></div>
-        
-    #     """, unsafe_allow_html=True)
-
-    
     def render_home(self):
         """Home page with 8 feature buttons in 2 rows"""
-        # self.render_header()
-        # self.render_header()
+       
         apply_modern_styles()
             
         # Add custom styling
