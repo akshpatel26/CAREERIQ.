@@ -2860,8 +2860,7 @@ class ResumeApp:
 
             # File Upload
             uploaded_file = st.file_uploader(
-    "Upload your resume", type=[
-        'pdf', 'docx'], key="standard_file")
+    "Upload your resume", type=['pdf', 'docx'], key="standard_file")
 
             if not uploaded_file:
                 # Display empty state with a prominent upload button
