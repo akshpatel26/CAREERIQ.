@@ -8,7 +8,7 @@
   CareerIQ is your **all-in-one tool** to analyze, optimize, and craft resumes that stand out, helping you **land your dream job** , Adaptive Practice **Smart Quiz** that adjusts questions to your skill level.
 </div>
 
-👨‍💻 [Try CareerIQ Live Demo](https://your-demo-link.com)
+👨‍💻 [Try CareerIQ Live Demo](https://rdsiyxk2xdm5qyzf4thvxn.streamlit.app/)
   
 ## <img src="https://github.com/user-attachments/assets/a6e4d77f-56d6-4aa8-8278-0f5a18ef5eb9" width="24px"> **What Makes Us Different ?**  
 
